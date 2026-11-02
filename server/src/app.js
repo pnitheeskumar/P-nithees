@@ -66,6 +66,16 @@ const authLimiter = rateLimit({
 app.use('/api/auth/login', authLimiter);
 app.use('/api/auth/register', authLimiter);
 
+// Root welcome endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'FinFlow REST API is running smoothly.',
+    healthCheck: '/api/health',
+    version: '1.0.0',
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   const dbStatus = getDbStatus();
