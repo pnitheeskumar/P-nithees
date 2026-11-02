@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { TrendingUp, Lock, Mail, User, ArrowRight, Sparkles, AlertCircle } from 'lucide-react';
+import { TrendingUp, Lock, Mail, User, ArrowRight, AlertCircle } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 
 export const RegisterPage = () => {
@@ -11,7 +11,7 @@ export const RegisterPage = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const { register, enterDemoMode } = useAuth();
+  const { register } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -32,11 +32,6 @@ export const RegisterPage = () => {
     } else {
       setError(res.message);
     }
-  };
-
-  const handleDemoLogin = () => {
-    enterDemoMode();
-    navigate('/dashboard');
   };
 
   return (
@@ -155,23 +150,7 @@ export const RegisterPage = () => {
             </button>
           </form>
 
-          <div className="relative flex items-center justify-center my-3">
-            <div className="border-t border-fin-border w-full" />
-            <span className="bg-fin-card px-3 text-[11px] text-fin-text-muted uppercase tracking-wider relative">
-              Or
-            </span>
-          </div>
-
-          <button
-            type="button"
-            onClick={handleDemoLogin}
-            className="w-full py-2.5 rounded-xl bg-fin-card-secondary hover:bg-fin-card-hover border border-fin-border hover:border-fin-accent text-fin-text text-xs font-semibold transition-all flex items-center justify-center gap-2"
-          >
-            <Sparkles className="w-4 h-4 text-amber-400" />
-            <span>Instant Sandbox Demo</span>
-          </button>
-
-          <p className="text-center text-xs text-fin-text-secondary pt-2">
+          <p className="text-center text-xs text-fin-text-secondary pt-3 border-t border-fin-border">
             Already have an account?{' '}
             <Link to="/login" className="text-fin-accent font-semibold hover:underline">
               Sign in

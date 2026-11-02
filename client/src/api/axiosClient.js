@@ -8,7 +8,7 @@ const axiosClient = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 10000,
+  timeout: 60000,
 });
 
 // Request interceptor to attach JWT token if present
@@ -27,8 +27,19 @@ axiosClient.interceptors.request.use(
 axiosClient.interceptors.response.use(
   (response) => response.data,
   (error) => {
+    let message = error.response?.data?.message;
+    if (!message) {
+      if (error.code === 'ECONNABORTED' || error.message?.includes('timeout')) {
+        message = 'Server connection timed out while waking up. Please try again.';
+      } else if (error.message?.includes('Network Error')) {
+        message = 'Unable to reach backend server. Please verify your connection.';
+      } else {
+        message = error.message || 'An unexpected error occurred.';
+      }
+    }
+
     const customError = {
-      message: error.response?.data?.message || error.message || 'An unexpected error occurred.',
+      message,
       status: error.response?.status,
       data: error.response?.data,
     };
