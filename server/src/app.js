@@ -14,7 +14,7 @@ import settingsRoutes from './routes/settingsRoutes.js';
 
 import { errorHandler } from './middleware/errorHandler.js';
 import { notFound } from './middleware/notFound.js';
-import { getDbStatus } from './config/database.js';
+import { connectDatabase, getDbStatus } from './config/database.js';
 
 const app = express();
 
@@ -65,6 +65,16 @@ const authLimiter = rateLimit({
 });
 app.use('/api/auth/login', authLimiter);
 app.use('/api/auth/register', authLimiter);
+
+// Ensure MongoDB connection before handling requests (essential for Vercel serverless)
+app.use(async (req, res, next) => {
+  try {
+    await connectDatabase();
+  } catch (err) {
+    // Handled so health check can still report status if DB has issues
+  }
+  next();
+});
 
 // Root welcome endpoint
 app.get('/', (req, res) => {

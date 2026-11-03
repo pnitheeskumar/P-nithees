@@ -8,37 +8,44 @@ try {
   // Ignore in restricted environments
 }
 
-let isConnected = false;
+let cachedPromise = null;
 
 export const connectDatabase = async () => {
+  if (mongoose.connection.readyState === 1) {
+    return mongoose.connection;
+  }
+
+  if (cachedPromise) {
+    return cachedPromise;
+  }
+
   const mongoUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/finflow';
 
-  try {
-    mongoose.set('strictQuery', true);
-    
-    // Set connection options
-    const conn = await mongoose.connect(mongoUri, {
-      serverSelectionTimeoutMS: 4000,
-      connectTimeoutMS: 5000,
+  mongoose.set('strictQuery', true);
+
+  cachedPromise = mongoose
+    .connect(mongoUri, {
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
+    })
+    .then((conn) => {
+      console.log(`[FinFlow Database] MongoDB Connected: ${conn.connection.host}/${conn.connection.name}`);
+      return conn;
+    })
+    .catch((error) => {
+      cachedPromise = null;
+      console.warn(`[FinFlow Database Warning] Unable to connect to MongoDB: ${error.message}`);
+      throw error;
     });
 
-    isConnected = true;
-    console.log(`[FinFlow Database] MongoDB Connected: ${conn.connection.host}/${conn.connection.name}`);
-    return conn;
-  } catch (error) {
-    isConnected = false;
-    console.warn(`[FinFlow Database Warning] Unable to connect to MongoDB at ${mongoUri}.`);
-    console.warn(`[FinFlow Database Info] Error: ${error.message}`);
-    console.warn(`[FinFlow Database Info] To enable full database persistence, ensure MongoDB is running locally or set MONGODB_URI in server/.env to your MongoDB Atlas connection string.`);
-    console.warn(`[FinFlow Database Info] Server is running with health check and graceful fallback capability.`);
-    return null;
-  }
+  return cachedPromise;
 };
 
 export const getDbStatus = () => {
+  const state = mongoose.connection.readyState;
   return {
-    connected: isConnected && mongoose.connection.readyState === 1,
-    readyState: mongoose.connection.readyState,
+    connected: state === 1,
+    readyState: state,
     host: mongoose.connection.host || null,
     name: mongoose.connection.name || null,
   };
