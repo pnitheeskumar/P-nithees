@@ -1,6 +1,10 @@
-# 💎 FinFlow — Full-Stack MERN Personal Finance & Wealth Platform
+# 💎 FinFlow — Personal Finance & Expense Management Platform
 
 <div align="center">
+
+### 🎓 Kalasalingam Academy of Research and Education
+**Department of Computer Science & Engineering • Artificial Intelligence & Machine Learning**  
+**Final Year Project • Team Avengers**
 
 ![FinFlow Banner](https://img.shields.io/badge/FinFlow-Finance%20Platform-9A384F?style=for-the-badge&logo=cashapp&logoColor=white)
 [![Live Demo](https://img.shields.io/badge/Live%20Platform-fineflow--finance.onrender.com-success?style=for-the-badge&logo=render&logoColor=white)](https://fineflow-finance.onrender.com/)
@@ -15,7 +19,7 @@
 
 🌐 **Live Application:** [https://fineflow-finance.onrender.com/](https://fineflow-finance.onrender.com/)
 
-[Live App](#-live-deployment) • [Features](#-key-features) • [Tech Stack](#-languages--tools-used) • [Architecture](#-system-architecture) • [Getting Started](#-step-by-step-setup-guide) • [API Reference](#-api-endpoints-reference) • [Security](#-security--privacy-architecture)
+[Live App](#-live-deployment) • [Screenshots](#-visual-showcase--platform-preview) • [Team](#-project-team--responsibilities) • [Objectives](#-problem-statement--objectives) • [Tech Stack](#-languages--tools-used) • [Architecture](#-system-architecture) • [Getting Started](#-step-by-step-setup-guide)
 
 </div>
 
@@ -27,6 +31,55 @@ FinFlow is deployed and accessible worldwide:
 
 - 🚀 **Live Application:** [https://fineflow-finance.onrender.com/](https://fineflow-finance.onrender.com/)
 - 🩺 **API Health Check:** [https://fineflow-finance.onrender.com/api/health](https://fineflow-finance.onrender.com/api/health)
+
+---
+
+## 📸 Visual Showcase & Platform Preview
+
+### 1. Executive Wealth Dashboard
+Real-time net worth calculation, monthly inflow/outflow velocity meters, savings rate calculations, and dynamic Recharts cash velocity bar & expense donut distributions.
+![FinFlow Dashboard](docs/screenshots/dashboard-preview.jpg)
+
+### 2. Financial Ledger & Categorized Transactions
+Audit, search, filter, and categorize monetary activities in real time with instant balance updates and MongoDB cloud persistence.
+![Financial Ledger](docs/screenshots/transactions-preview.jpg)
+
+### 3. Secure Authentication & Identity Portal
+JWT-based authentication with salted bcrypt password hashing, persistent sessions, and personal financial isolation.
+![FinFlow Login](docs/screenshots/login-preview.png)
+
+---
+
+## 👥 Project Team & Responsibilities
+
+**Institution:** Kalasalingam Academy of Research and Education (KARE)  
+**Department:** Computer Science & Engineering (Artificial Intelligence & Machine Learning)  
+**Team Name:** Team Avengers  
+
+| Team Member | Registration Number | Project Responsibility |
+|---|---|---|
+| **P. Nithees Kumar** | `99230041158` | Frontend UI & Interactive Dashboard Development |
+| **E. Sujay** | `99230041188` | Backend API, Server Architecture & Endpoints |
+| **Trishav Supolia** | `99230041203` | Database Schema Modeling & Data Validation |
+| **Sujitha Mary P** | `99230041132` | Authentication Security & Module Integration |
+| **Jelci Antoniya A** | `99230041114` | Quality Assurance, Testing Suite & Documentation |
+
+---
+
+## 🎯 Problem Statement & Objectives
+
+### The Problem
+- Manual personal expense tracking is cumbersome, scattered, and prone to calculation mistakes.
+- Financial records across checking, savings, and credit cards are fragmented.
+- Repetitive calculations consume valuable time without providing forward-looking clarity.
+- Spending patterns and category over-budgeting are difficult to identify early.
+
+### Project Objectives
+- **Centralize & Digitize:** Aggregate all bank accounts, credit cards, and vaults in a unified real-time dashboard.
+- **Automate Math:** Eliminate manual calculations with automated Net Worth, Savings Rate, and Monthly Cash Flow tracking.
+- **Envelope Budgeting:** Provide threshold-based visual alerts when spending approaches category limits.
+- **Visual Analytics:** Deliver executive-grade charts (cash flow velocity bar chart and outflow category donut breakdown).
+- **Privacy & Multi-Tenancy:** Ensure strict user-level data segregation with encrypted credentials.
 
 
 ---
