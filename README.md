@@ -3,6 +3,7 @@
 <div align="center">
 
 ![FinFlow Banner](https://img.shields.io/badge/FinFlow-Finance%20Platform-9A384F?style=for-the-badge&logo=cashapp&logoColor=white)
+[![Live Demo](https://img.shields.io/badge/Live%20Platform-fineflow--finance.onrender.com-success?style=for-the-badge&logo=render&logoColor=white)](https://fineflow-finance.onrender.com/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Node Version](https://img.shields.io/badge/Node.js-v18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -12,9 +13,21 @@
 
 **An enterprise-grade, luxury-aesthetic personal finance, budget tracking, and wealth architecture platform.**
 
-[Features](#-key-features) • [Tech Stack](#-languages--tools-used) • [Architecture](#-system-architecture) • [Getting Started](#-step-by-step-setup-guide) • [API Reference](#-api-endpoints-reference) • [Security](#-security--privacy-architecture)
+🌐 **Live Application:** [https://fineflow-finance.onrender.com/](https://fineflow-finance.onrender.com/)
+
+[Live App](#-live-deployment) • [Features](#-key-features) • [Tech Stack](#-languages--tools-used) • [Architecture](#-system-architecture) • [Getting Started](#-step-by-step-setup-guide) • [API Reference](#-api-endpoints-reference) • [Security](#-security--privacy-architecture)
 
 </div>
+
+---
+
+## 🌐 Live Deployment
+
+FinFlow is deployed and accessible worldwide:
+
+- 🚀 **Live Application:** [https://fineflow-finance.onrender.com/](https://fineflow-finance.onrender.com/)
+- 🩺 **API Health Check:** [https://fineflow-finance.onrender.com/api/health](https://fineflow-finance.onrender.com/api/health)
+
 
 ---
 
@@ -126,8 +139,8 @@ Ensure you have the following installed on your computer:
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/maxtris97/Expense-and-budget-magnagment-platform.git
-cd Expense-and-budget-magnagment-platform
+git clone https://github.com/pnitheeskumar/P-nithees.git
+cd P-nithees
 ```
 
 ---
@@ -191,9 +204,10 @@ npm run dev
 ```
 
 Your app will be live and accessible at:
-- **Client Web App:** [http://localhost:5173](http://localhost:5173)
-- **Backend API:** [http://localhost:5000](http://localhost:5000)
-- **API Health Check:** [http://localhost:5000/api/health](http://localhost:5000/api/health)
+- 🚀 **Live Production Platform:** [https://fineflow-finance.onrender.com/](https://fineflow-finance.onrender.com/)
+- 🩺 **Live Health Check:** [https://fineflow-finance.onrender.com/api/health](https://fineflow-finance.onrender.com/api/health)
+- **Local Client Web App:** [http://localhost:5173](http://localhost:5173)
+- **Local Backend API:** [http://localhost:5000](http://localhost:5000)
 
 ---
 
