@@ -19,7 +19,7 @@
 
 🌐 **Live Application:** [https://fineflow-finance.onrender.com/](https://fineflow-finance.onrender.com/)
 
-[Live App](#-live-deployment) • [Screenshots](#-visual-showcase--platform-preview) • [Team](#-project-team--responsibilities) • [Objectives](#-problem-statement--objectives) • [Tech Stack](#-languages--tools-used) • [Architecture](#-system-architecture) • [Getting Started](#-step-by-step-setup-guide)
+[Live App](#-live-deployment) • [Screenshots](#-visual-showcase--platform-preview) • [Objectives](#-problem-statement--objectives) • [Tech Stack](#-languages--tools-used) • [Architecture](#-system-architecture) • [Getting Started](#-step-by-step-setup-guide)
 
 </div>
 
@@ -47,22 +47,6 @@ Audit, search, filter, and categorize monetary activities in real time with inst
 ### 3. Secure Authentication & Identity Portal
 JWT-based authentication with salted bcrypt password hashing, persistent sessions, and personal financial isolation.
 ![FinFlow Login](docs/screenshots/login-preview.png)
-
----
-
-## 👥 Project Team & Responsibilities
-
-**Institution:** Kalasalingam Academy of Research and Education (KARE)  
-**Department:** Computer Science & Engineering (Artificial Intelligence & Machine Learning)  
-**Team Name:** Team Avengers  
-
-| Team Member | Registration Number | Project Responsibility |
-|---|---|---|
-| **P. Nithees Kumar** | `99230041158` | Frontend UI & Interactive Dashboard Development |
-| **E. Sujay** | `99230041188` | Backend API, Server Architecture & Endpoints |
-| **Trishav Supolia** | `99230041203` | Database Schema Modeling & Data Validation |
-| **Sujitha Mary P** | `99230041132` | Authentication Security & Module Integration |
-| **Jelci Antoniya A** | `99230041114` | Quality Assurance, Testing Suite & Documentation |
 
 ---
 
