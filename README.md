@@ -31,6 +31,8 @@ FinFlow is deployed and accessible worldwide:
 
 - 🚀 **Live Application:** [https://fineflow-finance.onrender.com/](https://fineflow-finance.onrender.com/)
 - 🩺 **API Health Check:** [https://fineflow-finance.onrender.com/api/health](https://fineflow-finance.onrender.com/api/health)
+- 📄 **Academic Project Report:** [PROJECT_REPORT.md](PROJECT_REPORT.md) • [Word Document (.docx)](docs/FinFlow_Project_Report.docx)
+- 📊 **Presentation Deck (PPT):** [PowerPoint (.pptx)](docs/FinFlow_Project_Presentation.pptx)
 
 ---
 

@@ -544,3 +544,4 @@ The login screen features email and password credentials, client-side input vali
 <div align="center">
 <strong>© 2026 FinFlow Platform • Kalasalingam Academy of Research and Education</strong>
 </div>
+
